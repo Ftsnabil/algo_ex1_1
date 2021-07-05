@@ -1,0 +1,16 @@
+ALGORITHM Ex2
+VAR
+    set1,set2,set: ARRAY_OF INTEGER[];
+    x,y:INTEGER;
+    elements:INTEGER:=0;
+BEGIN
+    set:concat(set1,set2)
+    FOR x FROM 0 TO set.length-1 DO
+        FOR y FROM 0 TO set.length-1 DO
+            IF (set[x]=set[y] and x<>y) THEN
+                elements:= elements+set[x]
+            END_IF
+        END_FOR
+    END_FOR
+    write('Sum of overlapping elements:',elements)
+END
