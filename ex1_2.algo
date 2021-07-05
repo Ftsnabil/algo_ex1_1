@@ -1,0 +1,27 @@
+ALGORITHM Ex1_2
+VAR
+    set1,set2,set,index : ARRAY_OF INTEGER[];
+  Nabil:HASH_TABLE<INTEGER,INTEGER>
+
+BEGIN
+    set=concat(set1,set2)
+    FOR x FROM 0 TO set.length-1 DO
+        sum:=1
+        IF (Nabil.lookup(set[x])=true) THEN
+            sum:= Nabil.get(set[x])+1
+
+        ELSE
+           index.push(set[x])
+      
+        END_IF
+             Nabil.insert(set[x],sum)
+    END_FOR
+    FOR i FROM 0 TO index.length-1  DO
+        IF (Nabil.get(index[x]<>1)) THEN
+        sum_c:= sum+ index[x]*Nabil.get(index[x])
+          ELSE
+          sum_d:=sum+index[x]
+        END_IF
+    END_FOR
+
+END
