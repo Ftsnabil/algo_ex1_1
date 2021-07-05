@@ -1,0 +1,16 @@
+ALGORITHM Ex1_1
+VAR
+    x, y : INTEGER
+    distinct:INTEGER:=0
+    set1,set2,set : ARRAY_OF INTEGER[];
+BEGIN
+    set:=concat(set1,set2)
+    FOR x FROM 0 TO set.length-1 DO
+       FOR y FROM 0 TO set.length-1  DO
+           IF (set[x]<>set[y] AND x<>y) THEN
+               distinct=distinct+set[x]
+            END_IF
+       END_FOR
+    END_FOR
+    write('sum of distinct element :',distinct)
+END
